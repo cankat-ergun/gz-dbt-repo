@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw                 # dbt içinde kullanacağın kısa ad
+    schema: red_gz_raw_data   # BigQuery'deki gerçek dataset adı
+    tables:
+      - name: adwords
+        identifier: raw_gz_adwords
+
+      - name: bing
+        identifier: raw_gz_bing
+
+      - name: criteo
+        identifier: raw_gz_criteo
+
+      - name: facebook
+        identifier: raw_gz_facebook
+
+      - name: sales
+        identifier: raw_gz_sales
+
+      - name: ship
+        identifier: raw_gz_ship
+
+      - name: product
+        identifier: raw_product      # listede 'raw_gz_product' yok; 'raw_product' var
+ 
