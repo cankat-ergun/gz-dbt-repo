@@ -39,7 +39,7 @@ models:
   my_new_project:              # proje adıyla eşleşmeli
     example:
       +materialized: table     
-  +location: EU                # tüm modeller için geçerli varsayılan ayar
+      +location: EU                # tüm modeller için geçerli varsayılan ayar
 
   seeds:
     +location: EU
@@ -52,7 +52,7 @@ models:
     +materialized: table
     +location: EU
 
-  finance:
-    +schema: finance
-    +materialized: table
-    +location: EU
+    finance:
+      +schema: finance
+      +materialized: table
+      +location: EU
