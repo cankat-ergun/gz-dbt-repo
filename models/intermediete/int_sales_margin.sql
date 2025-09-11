@@ -20,6 +20,7 @@ s_product as (
 
 
 select
+    s.date_date,
     s.orders_id,
     s.product_id,
     s.qty,
