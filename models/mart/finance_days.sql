@@ -31,7 +31,6 @@ select
   sum(o.qty)                                   as total_qty
 from o
 left join op using (orders_id, date_date)
-WHERE o.date_date is null
 
 group by 1
 order by 1

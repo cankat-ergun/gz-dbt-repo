@@ -46,27 +46,3 @@ sources:
               
 
             
-      - name: finance_days
-        description: Günlük finans özetleri (işlem sayisi, gelir, sepet, marjlar, maliyetler).
-        columns:
-          - name: date_date
-            description: Gün
-            tests: 
-              - not_null
-              - unique
-          - name: txn_count
-            description: Günlük işlem sayisi (distinct orders_id)
-          - name: total_revenue
-            description: Günlük toplam gelir
-          - name: avg_basket
-            description: Günlük ortalama sepet tutari (order başina)
-          - name: operational_margin
-            description: Günlük operasyonel marj toplami
-          - name: total_purchase_cost
-            description: Günlük toplam satin alma maliyeti
-          - name: total_shipping_fees
-            description: Günlük toplam müşteri nakliye ücretleri
-          - name: total_logistics_costs
-            description: Günlük toplam lojistik maliyetleri (logcost + ship_cost)
-          - name: total_qty
-            description: Günlük satilan toplam ürün adedi
