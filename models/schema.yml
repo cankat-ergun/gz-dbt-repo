@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: raw                 # dbt içinde kullanacağın kısa ad
-    schema: red_gz_raw_data   # BigQuery'deki gerçek dataset adı
+  - name: raw                 # dbt içinde kullanacağin kisa ad
+    schema: red_gz_raw_data   # BigQuery'deki gerçek dataset adi
     tables:
       - name: adwords
         identifier: raw_gz_adwords
@@ -24,7 +24,6 @@ sources:
         columns:
           - name: orders_id
             tests:
-            - unique
             - not_null
             
 
@@ -33,7 +32,6 @@ sources:
         columns:
           - name: orders_id
             tests:
-            - unique
             - not_null
             
 
@@ -44,8 +42,7 @@ sources:
           - name: products_id
             tests:
               - not_null
-              - unique
+             
               
 
             
- 

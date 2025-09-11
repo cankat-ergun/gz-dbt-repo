@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: finance_days        
+    description: Günlük finans özet tablosu
+    columns:
+      - name: date_date
+        description: Her gün tam 1 satir olmali
+        tests:
+          - not_null
+          - unique
