@@ -36,7 +36,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  my_new_project:
-    # Applies to all files under models/example/
+  my_new_project:              # proje adıyla eşleşmeli
     example:
-      +materialized: table
+      +materialized: table     
+  +location: EU                # tüm modeller için geçerli varsayılan ayar
+
+seeds:
+  +location: EU
+
+snapshots:
+  +location: EU
