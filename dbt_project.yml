@@ -41,8 +41,13 @@ models:
       +materialized: table     
   +location: EU                # tüm modeller için geçerli varsayılan ayar
 
-seeds:
-  +location: EU
+  seeds:
+    +location: EU
 
-snapshots:
-  +location: EU
+  snapshots:
+    +location: EU
+
+
+  mart:
+    +materialized: table
+    ş+location: EU
