@@ -51,7 +51,8 @@ models:
   mart:
     +materialized: table
     +location: EU
-    
+
   finance:
+    +schema: finance
     +materialized: table
     +location: EU
