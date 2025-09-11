@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: finance_days        # dosya adın: finance_days.sql
+  - name: finance_days        
     description: Günlük finans özet tablosu
     columns:
       - name: date_date

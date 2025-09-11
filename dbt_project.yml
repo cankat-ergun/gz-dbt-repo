@@ -37,22 +37,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   my_new_project:              # proje adıyla eşleşmeli
-    example:
-      +materialized: table     
-      +location: EU                # tüm modeller için geçerli varsayılan ayar
+                # tüm modeller için geçerli varsayılan ayar
 
-  seeds:
-    +location: EU
-
-  snapshots:
-    +location: EU
-
-
-  mart:
-    +materialized: table
-    +location: EU
-
-    finance:
-      +schema: finance
+    mart:
       +materialized: table
       +location: EU
+
+      finance:
+        +schema: finance
+        +materialized: table
+        +location: EU
