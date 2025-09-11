@@ -47,3 +47,11 @@ models:
         +schema: finance
         +materialized: table
         +location: EU
+    
+    intermediete:
+      +materialized: view
+      +location: EU
+    
+    staging:
+      +materialized: view
+      +location: EU

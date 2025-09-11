@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: int_campaigns
+    description: "Union of campaign data across Adwords, Facebook, Bing, and Criteo"
+    columns:
+      - name: date_date
+        description: "Date of the campaign"
+        tests:
+          - not_null
+
+      - name: campaign_key
+        description: "Unique campaign identifier (unique within each paid source)"
+      
+      - name: paid_source
+        description: "The ad platform (adwords, facebook, bing, criteo)"
+      
+      - name: ads_cost
+        description: "Advertising cost"
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+      - name: impression
+        description: "Number of impressions"
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+      - name: click
+        description: "Number of clicks"
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+  
