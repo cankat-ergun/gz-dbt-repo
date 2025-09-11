@@ -50,4 +50,4 @@ models:
 
   mart:
     +materialized: table
-    ş+location: EU
+    +location: EU
